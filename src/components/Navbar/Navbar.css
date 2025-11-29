@@ -1,0 +1,141 @@
+.navbar {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 0.25vh solid #ececec;
+  padding-bottom: 3vh;
+}
+.top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3vh 10vh 8vh 10vh;
+}
+.left {
+  font-size: 4vh;
+  display: flex;
+  align-items: center;
+}
+.center {
+  font-size: 4vh;
+  font-weight: bold;
+  text-align: center;
+  flex: 1;
+  margin-left: 15vh;
+}
+.right {
+  display: flex;
+  align-items: center;
+  gap: 3vh;
+  font-size: 2vh;
+}
+.profile-img {
+  width: 2vh;
+  height: 2vh;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.language {
+  display: flex;
+  align-items: center;
+  gap: 1vh;
+  font-size: 1.5vh;
+  cursor: pointer;
+  font-weight: 500;
+}
+.right svg,
+.right img {
+  cursor: pointer;
+}
+.bottom-row {
+  display: flex;
+  justify-content: center;
+  gap: 4vh;
+  text-align: center;
+  font-size: 2vh;
+  font-weight: 500;
+}
+.bottom-row p {
+  cursor: pointer;
+}
+.bottom-row p:hover {
+  color: #000;
+  font-weight: 600;
+}
+.hamburger {
+  display: none;
+  font-size: 3vh;
+  cursor: pointer;
+}
+.logo-img {
+  width: 4vh;
+  height: 4vh;
+  object-fit: contain;
+  margin-left: 1vh;
+}
+
+@media screen and (max-width: 768px) {
+  .top-row {
+    padding: 2vh 3vh;
+    justify-content: space-between;
+  }
+  .left {
+    display: flex;
+    align-items: center;
+    gap: 1vh;
+  }
+  .hamburger {
+    display: block;
+  }
+  .center {
+    font-size: 3vh;
+    margin-left: 0;
+    text-align: center;
+    flex: 1;
+  }
+  .right {
+    display: flex;
+    align-items: center;
+    gap: 2vh;
+  }
+  .profile-img,
+  .language {
+    display: none;
+  }
+
+  .bottom-row {
+    display: flex;
+    justify-content: flex-start;
+    gap: 0.5vh;
+    padding: 1vh 3vh;
+    font-size: 1.8vh;
+    overflow-x: auto;
+    white-space: nowrap;
+    border-top: 0.1vh solid #ececec;
+  }
+
+  .bottom-row p {
+    flex: none;
+    display: none; 
+  }
+  .bottom-row p.home,
+  .bottom-row p:nth-child(2) {
+    display: block;
+  }
+
+  .bottom-row p.home::after {
+    content: " | ";
+    color: gray;
+    font-weight: 500;
+  }
+
+  .bottom-row p.home {
+    color: gray;
+  }
+  .bottom-row p:nth-child(2) {
+    color: black;
+    font-weight: 600;
+  }
+  .navbar {
+    padding-bottom: 0vh;
+  }
+}
