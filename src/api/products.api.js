@@ -9,6 +9,7 @@ const ProductAPI = {
     });
     return response.data;
   },
+  
 };
 
 export default ProductAPI;
